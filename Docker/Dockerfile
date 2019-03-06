@@ -12,4 +12,5 @@ RUN mvn -f ./Argus clean package
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-jar", "./Argus/target/exercise-0.0.1-SNAPSHOT.jar"]
+WORKDIR ./Argus
+ENTRYPOINT ["./mvnw", "spring-boot:run"]

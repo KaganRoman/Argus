@@ -6,4 +6,4 @@ docker build -t argus Docker
 
 # Run Docker Instructions
 
-docker run -p 8080:8080 argus $MIRROR_URL
+docker run -d -p 80:8080 argus -Dspring-boot.run.arguments=--mirror=<MIRROR_URL>
